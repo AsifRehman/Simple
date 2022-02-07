@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>SIT Solutions</title>
+	<link rel="stylesheet" href="resource/css/reset.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="resource/css/style.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="resource/css/invalid.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="resource/css/form.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="resource/css/tabs.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="resource/css/reports.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="resource/css/font-awesome.css" type="text/css" media="screen"/>
+	<link href="resource/css/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="resource/css/bootstrap.min.css" type="text/css" media="screen"/>
+    <link href="resource/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resource/css/bootstrap-nav-wizard.css" rel="stylesheet">
+
+	<style>a.poplight{color:#666}h3{font-size:14px}</style>
+	<script type="text/javascript" src="resource/scripts/jquery.1.11.min.js"></script>
+	<script type="text/javascript" src="resource/scripts/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="resource/scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resource/scripts/configuration.js"></script>
+	<script type="text/javascript" src="resource/scripts/sideBarFunctions.js"></script>
+</head>
+<body>
+	<div id="body-wrapper">
+		<div id="sidebar"><input type="hidden" value="settings.php" class="this_file_name"/>
+<input type="hidden" value="0101010003" class="cash_default"/>
+<div class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="hamburger hamburger--3dx-r pull-left toggleSideBar"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a>
+			<a href="dashboard.php" class="navbar-brand">
+				<img alt="Company logo" class="logo_small" src="resource/images/sitsbook-logo/logo.png"/></a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				
+								
+				<li><a class="notification-icons" href="change-password.php">
+					<i class="fa fa-user"></i> <span>TayabAccount </span> </a>
+				</li>
+				<li><a class="notification-icons" href="logout.php?out" data-toggle="tooltip" title="Logout"><i class="fa fa-sign-out"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<aside>
+	<nav class='site-nav'>
+		<ul id="main-nav">
+				<li><a href="dashboard.php" class="nav-top-item no-submenu"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+			<li><a class="nav-top-item"><i class="fa fa-book"></i> Cash / Cheque</a>
+				<ul>
+							<li><a href="create-voucher.php">Journal Voucher</a></li>
+								<li><a href="cash-book-voucher.php">Cash Book</a></li>
+							<li><a href="cash-receipt.php">Cash Receipt</a></li>
+								<li><a href="cash-payment.php">Cash Payment</a></li>
+								<li><a href="bank-receipt.php">Bank Receipt</a></li>
+								<li><a href="bank-payment.php">Bank Payment</a></li>
+								<li><a href="posted-enteries.php">Search Vouchers</a></li>
+					</ul>
+			</li>
+					<li><a class="nav-top-item"><i class="fa fa-shopping-cart"></i> Purchases</a>
+				<ul>
+	<li><a href="purchase-details.php">Purchases</a></li><li><a href="purchase-return-details.php">Purchase Returns</a></li>
+					</ul>
+			</li>
+
+			
+			
+
+	
+
+	
+
+	
+
+
+
+			
+
+			<li><a class="nav-top-item"><i class="fa fa-angle-double-right"></i> Sales</a>
+				<ul>
+
+	
+
+									<!-- <li><a href="sale-orders.php">Sale Orders</a></li> -->
+						<li><a href="sale-details.php">Sales</a></li><li><a href="sales-return-details.php">Sale Returns</a></li>
+
+
+					</ul>
+			</li>
+
+	
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+
+
+	
+	
+	
+	
+
+	
+
+	
+	
+
+	
+			<li><a class="nav-top-item"><i class="fa fa-angle-double-right"></i> Embroidery</a>
+				<ul>
+							</ul>
+					</li>
+			
+
+	
+	
+
+	
+				<li><a href="cheques-details.php" class="nav-top-item no-submenu"><i class="fa fa-check"></i> Cheques</a></li>
+	
+			<!-- <li><a class="nav-top-item"><i class="fa fa-money"></i>Cheques</a> -->
+				<!-- <ul> -->
+						<!-- <li><a href="cheques-payments.php">Payments</a></li> -->
+	
+					<!-- <li><a href="cheques-received.php">Receipts</a></li> -->
+					<!-- </ul> -->
+			<!-- </li> -->
+
+	
+
+	
+					<li><a href="financial-reports.php" class="nav-top-item no-submenu"><i class="fa fa-calculator"></i> Reports</a></li>
+						<li><a href="settings.php" class="nav-top-item no-submenu"><i class="fa fa-cog"></i> Settings</a></li>
+	
+
+	
+	
+
+	
+
+		<li><a href="logout.php?out" class="nav-top-item no-submenu"><i class="fa fa-sign-out"></i> Sign Out</a></li>
+	</ul> <!-- End #main-nav -->
+	</nav>
+</aside>
+<div class="clear"></div>
+
+<!-- get sms balance -->
+<script type="text/javascript">setTimeout(function(){var mode='smsBalance';$.post('db/sms-info-process.php',{mode:mode},function(data){data=$.parseJSON(data);$('span.sms_count').html(data['SMS']);});},5000);</script></div> <!-- End #sidebar -->
+		<div id="bodyWrapper">
+			<div class="content-box-top" style="padding-bottom: 30px;">
+				<div class="summery_body">
+					<div class="content-box-header">
+						<ul class="nav nav-wizard" style="float:left">
+							<li class="active"><p><i class="fa fa-cog"></i> Settings Startup</p></li>
+						</ul>
+					</div><!-- End .content-box-header -->
+					<div class="clear"></div>
+											<a href="company-detail.php">
+							<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+								<img src="uploads/logo/06187797531d809bd69ddd5e8c127214.jpg" class="panelIcon hvr-outline-in"/>
+								<h3>Company Profile</h3>
+							</div>
+						</a>
+											<a href="change-password.php">
+						<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+							<img src="resource/images/MedIcons/safe.png" class="panelIcon hvr-outline-in"/>
+							<h3>Change Password</h3>
+						</div>
+					</a>
+					<div class="clear"></div>
+					<hr/>
+
+												<a href="banks-management.php">
+							<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+								<img src="resource/images/MedIcons/banks.png" class="panelIcon hvr-outline-in"/>
+								<h3>Banks</h3>
+							</div>
+						</a>
+												<a href="suppliers-management.php">
+							<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+								<img src="resource/images/MedIcons/supplier.png" class="panelIcon hvr-outline-in"/>
+								<h3>Suppliers</h3>
+							</div>
+						</a>
+						
+
+										<a href="customer-management.php">
+							<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+								<img src="resource/images/MedIcons/customer.png" class="panelIcon hvr-outline-in"/>
+								<h3>Customers</h3>
+							</div>
+						</a>
+				
+						
+					
+											<a href="employees-management.php">
+							<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+								<img src="resource/images/MedIcons/payrolls.png" class="panelIcon hvr-outline-in"/>
+								<h3>Employees</h3>
+							</div>
+						</a>
+
+						<!-- <a href="agents-list.php">
+							<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+								<img src="resource/images/MedIcons/payrolls.png" class="panelIcon hvr-outline-in" />
+								<h3>Agents</h3>
+							</div>
+						</a> -->
+						<div class="clear"></div>
+						<hr/>
+					
+
+												<a href="item-category-management.php">
+								<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+									<img src="resource/images/MedIcons/item_categories.png" class="panelIcon hvr-outline-in"/>
+									<h3>Category</h3>
+								</div>
+							</a>
+														<!-- <a href="stocks-summery-report.php">
+								<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+									<img src="resource/images/MedIcons/items.png" class="panelIcon hvr-outline-in" />
+									<h3>Items</h3>
+								</div>
+							</a> -->
+
+							<a href="items-management.php?tab=list">
+								<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+									<img src="resource/images/MedIcons/items.png" class="panelIcon hvr-outline-in"/>
+									<h3>Items</h3>
+								</div>
+							</a>
+
+														
+							<a href="item-rates.php">
+								<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+									<img src="resource/images/MedIcons/items.png" class="panelIcon hvr-outline-in"/>
+									<h3>Search Rate</h3>
+								</div>
+							</a>
+							
+						
+						
+						
+						
+						
+																
+					
+					
+					<div class="clear"></div>
+					
+
+
+
+						
+
+
+
+																					<div class="clear"></div>
+								<hr/>
+								<a href="accounts-management.php">
+									<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+										<img src="resource/images/MedIcons/chart.png" class="panelIcon hvr-outline-in"/>
+										<h3>Chart of Accounts</h3>
+									</div>
+								</a>
+																<a href="linked-accounts.php">
+									<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+										<img src="resource/images/MedIcons/chart.png" class="panelIcon hvr-outline-in"/>
+										<h3>Linked Accounts</h3>
+									</div>
+								</a>
+																<a href="expense-accounts.php">
+									<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+										<img src="resource/images/MedIcons/chart.png" class="panelIcon hvr-outline-in"/>
+										<h3>Expense Accounts</h3>
+									</div>
+								</a>
+															
+							<div class="clear"></div>
+							<hr/>
+
+															<a href="misc-settings.php">
+									<div class="panel1 hvr-underline-from-center col-xs-12 col-sm-12 col-md-4 col-lg-3">
+										<img src="resource/images/setting.png" class="panelIcon hvr-outline-in"/>
+										<h3>Misc. Settings</h3>
+									</div>
+								</a>
+														<div style=" clear:both;"></div>
+					</div><!--summery_body-->
+				</div><!-- End .content-box -->
+			</div><!--bodyWrapper-->
+		</div><!--body-wrapper-->
+	</body>
+	</html>
+	
