@@ -1,0 +1,569 @@
+
+    <!DOCTYPE html 
+    >
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="resource/css/reset.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="resource/css/style.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="resource/css/invalid.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="resource/css/form.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="resource/css/tabs.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="resource/css/reports.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="resource/css/font-awesome.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="resource/css/bootstrap.min.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="resource/css/bootstrap-select.css" type="text/css" media="screen"/>
+    <link href="resource/css/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="resource/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resource/css/bootstrap-nav-wizard.css" rel="stylesheet">
+    <link rel="stylesheet" href="resource/css/table-style.css" type="text/css"/>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="resource/scripts/jquery.1.11.min.js"></script><script type="text/javascript" src="resource/scripts/sideBarFunctions.js"></script>
+    <script src="resource/scripts/jquery-ui.min.js"></script>
+    <script src="resource/scripts/bootstrap.min.js"></script>
+    <script src="resource/scripts/bootstrap-select.js"></script>
+    <script type="text/javascript" src="resource/scripts/configuration.js"></script>
+    <script type="text/javascript" src="resource/scripts/item-category.configuration.js"></script>
+    <script type="text/javascript">$(document).ready(function(){$("select[name='gender']").selectpicker();$(".form-control").keydown(function(e){if(e.keyCode==13){e.preventDefault();}});$("input[name='mobile']").focus();});</script>
+</head>
+
+<body>
+<div id="sidebar"><input type="hidden" value="add-item-main-category.php" class="this_file_name"/>
+<input type="hidden" value="0101010003" class="cash_default"/>
+<div class="navbar navbar-default navbar-fixed-top">
+<div class="container-fluid">
+    <div class="navbar-header">
+        <a class="hamburger hamburger--3dx-r pull-left toggleSideBar"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a>
+        <a href="dashboard.php" class="navbar-brand">
+            <script data-pagespeed-no-defer>//<![CDATA[
+(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','https://wd.sitsbook.info/add-item-main-category.php','82dtZm2p5Q',true,false,'o70c0k5JZn8');
+//]]></script><img alt="Company logo" class="logo_small" src="resource/images/sitsbook-logo/logo.png" data-pagespeed-url-hash="1471217008" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            
+                            
+            <li><a class="notification-icons" href="change-password.php">
+                <i class="fa fa-user"></i> <span>Tayab Account </span> </a>
+            </li>
+            <li><a class="notification-icons" href="logout.php?out" data-toggle="tooltip" title="Logout"><i class="fa fa-sign-out"></i></a></li>
+        </ul>
+    </div>
+</div>
+</div>
+<aside>
+<nav class='site-nav'>
+    <ul id="main-nav">
+            <li><a href="dashboard.php" class="nav-top-item no-submenu"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a class="nav-top-item"><i class="fa fa-book"></i> Cash / Cheque</a>
+            <ul>
+                        <li><a href="create-voucher.php">Journal Voucher</a></li>
+                            <li><a href="cash-book-voucher.php">Cash Book</a></li>
+                        <li><a href="cash-receipt.php">Cash Receipt</a></li>
+                            <li><a href="cash-payment.php">Cash Payment</a></li>
+                            <li><a href="bank-receipt.php">Bank Receipt</a></li>
+                            <li><a href="bank-payment.php">Bank Payment</a></li>
+                            <li><a href="posted-enteries.php">Search Vouchers</a></li>
+                </ul>
+        </li>
+                <li><a class="nav-top-item"><i class="fa fa-shopping-cart"></i> Purchases</a>
+            <ul>
+<li><a href="purchase-details.php">Purchases</a></li><li><a href="purchase-return-details.php">Purchase Returns</a></li>
+                </ul>
+        </li>
+
+        
+        
+
+
+
+
+
+
+
+
+
+        
+
+        <li><a class="nav-top-item"><i class="fa fa-angle-double-right"></i> Sales</a>
+            <ul>
+
+
+
+                                <!-- <li><a href="sale-orders.php">Sale Orders</a></li> -->
+                    <li><a href="sale-details.php">Sales</a></li><li><a href="sales-return-details.php">Sale Returns</a></li>
+
+
+                </ul>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li><a class="nav-top-item"><i class="fa fa-angle-double-right"></i> Embroidery</a>
+            <ul>
+                        </ul>
+                </li>
+        
+
+
+
+
+
+            <li><a href="cheques-details.php" class="nav-top-item no-submenu"><i class="fa fa-check"></i> Cheques</a></li>
+
+        <!-- <li><a class="nav-top-item"><i class="fa fa-money"></i>Cheques</a> -->
+            <!-- <ul> -->
+                    <!-- <li><a href="cheques-payments.php">Payments</a></li> -->
+
+                <!-- <li><a href="cheques-received.php">Receipts</a></li> -->
+                <!-- </ul> -->
+        <!-- </li> -->
+
+
+
+
+                <li><a href="financial-reports.php" class="nav-top-item no-submenu"><i class="fa fa-calculator"></i> Reports</a></li>
+                    <li><a href="settings.php" class="nav-top-item no-submenu"><i class="fa fa-cog"></i> Settings</a></li>
+
+
+
+
+
+
+
+    <li><a href="logout.php?out" class="nav-top-item no-submenu"><i class="fa fa-sign-out"></i> Sign Out</a></li>
+</ul> <!-- End #main-nav -->
+</nav>
+</aside>
+<div class="clear"></div>
+
+<!-- get sms balance -->
+<script type="text/javascript">setTimeout(function(){var mode='smsBalance';$.post('db/sms-info-process.php',{mode:mode},function(data){data=$.parseJSON(data);$('span.sms_count').html(data['SMS']);});},5000);</script></div> <!-- End #sidebar -->
+
+
+<div id="bodyWrapper">
+    <div class="content-box-top" style="overflow:visible;">
+        <div class="summery_body">
+            <div class="content-box-header">
+                    <ul class="nav nav-wizard" style="float:left">
+                        <li><a href="settings.php"><i class="fa fa-cog"></i> Settings</a></li>
+                        <li class="active"><a href="#">ItemCategory Details</a></li>
+                    </ul>
+
+                    <span id="tabPanel">
+                        <div class="tabPanel">
+                            <a href="item-category-management.php"><div class="tab">List</div></a>
+                            <div class="tabSelected">Add Category</div>
+                                                        </div>
+                    </span>
+                <div style="clear:both;"></div>
+            </div><!-- End .content-box-header -->
+            <div style="clear:both; height:20px"></div>
+
+            
+            <div id="bodyTab1">
+                <form method="post" action="" class="form-horizontal" enctype="multipart/form-data">
+                    <div class="col-xs-12">
+                      <input type="hidden" name="id" value="0"/>
+
+                      <div class="form-group">
+                        <label class="control-label col-sm-2">Category Title :</label>
+                        <div class="col-sm-4">
+                          <input class="form-control" name="name" value="" required autocomplete="off"/>
+                        </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <label class="control-label col-sm-2">Icon :</label>
+                        <div class="col-sm-6">
+                          <input name="image" value="" type="file" accept="image/*" class="pull-left btn btn-default"/>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-sm-2"></label>
+                        <div class="col-sm-6">
+                          <input type="submit" name="save" value="Save" class="btn btn-primary"/>
+                          <input type="button" value="New Form" class="btn btn-default" onclick="window.location.href='add-item-main-category.php'" ; />
+                        </div>
+                      </div>
+                    </div>
+                </form>
+                <div style="clear: inherit"></div>
+
+<div class="col-lg-offset-2 col-lg-8 col-sm-12">
+    <table class="table table-responsive tableStyle">
+        <thead>
+            <tr>
+                <th class="col-xs-1 text-center">Sr. </th>
+                <th class="col-xs-1 text-center"></th>
+                <th class="col-xs-1 text-center">CODE</th>
+                <th class="col-xs-6 text-left">Value</th>
+                <th class="col-xs-2 text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">18</td>
+                    <td class="text-left">Al Karam </td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=9">View</a>
+                        <a class="pointer" value="9"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">2</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">37</td>
+                    <td class="text-left">AR (VOL)</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=29">View</a>
+                        <a class="pointer" value="29"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">3</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">25</td>
+                    <td class="text-left">Beach Tree</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=17">View</a>
+                        <a class="pointer" value="17"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">4</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">27</td>
+                    <td class="text-left">Bin Maryam</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=19">View</a>
+                        <a class="pointer" value="19"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">5</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">49</td>
+                    <td class="text-left">Chemicals</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=42">View</a>
+                        <a class="pointer" value="42"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">6</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">42</td>
+                    <td class="text-left">Chiffon</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=34">View</a>
+                        <a class="pointer" value="34"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">7</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">39</td>
+                    <td class="text-left">COTTON</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=31">View</a>
+                        <a class="pointer" value="31"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">8</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">21</td>
+                    <td class="text-left">Crimson </td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=13">View</a>
+                        <a class="pointer" value="13"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">9</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">52</td>
+                    <td class="text-left">Cut Piece</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=45">View</a>
+                        <a class="pointer" value="45"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">10</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">36</td>
+                    <td class="text-left">Elan</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=28">View</a>
+                        <a class="pointer" value="28"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">11</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">48</td>
+                    <td class="text-left">Embroidery</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=41">View</a>
+                        <a class="pointer" value="41"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">12</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">53</td>
+                    <td class="text-left">FDK</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=46">View</a>
+                        <a class="pointer" value="46"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">13</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">47</td>
+                    <td class="text-left">Finish</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=40">View</a>
+                        <a class="pointer" value="40"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">14</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">46</td>
+                    <td class="text-left">Grey/Dyed Cloth</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=39">View</a>
+                        <a class="pointer" value="39"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">15</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">26</td>
+                    <td class="text-left">Ink</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=18">View</a>
+                        <a class="pointer" value="18"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">16</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">35</td>
+                    <td class="text-left">Khadi</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=27">View</a>
+                        <a class="pointer" value="27"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">17</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">10</td>
+                    <td class="text-left">LAWN</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=1">View</a>
+                        <a class="pointer" value="1"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">18</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">32</td>
+                    <td class="text-left">Miscellaneous</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=24">View</a>
+                        <a class="pointer" value="24"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">19</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">33</td>
+                    <td class="text-left">Packing Material</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=25">View</a>
+                        <a class="pointer" value="25"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">20</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">30</td>
+                    <td class="text-left">Printing</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=22">View</a>
+                        <a class="pointer" value="22"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">21</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">45</td>
+                    <td class="text-left">Rep Vol</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=38">View</a>
+                        <a class="pointer" value="38"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">22</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">24</td>
+                    <td class="text-left">Schiffly</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=16">View</a>
+                        <a class="pointer" value="16"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">23</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">51</td>
+                    <td class="text-left">Scrape Sales</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=44">View</a>
+                        <a class="pointer" value="44"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">24</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">41</td>
+                    <td class="text-left">SS</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=33">View</a>
+                        <a class="pointer" value="33"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">25</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">50</td>
+                    <td class="text-left">VISCOS</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=43">View</a>
+                        <a class="pointer" value="43"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">26</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">34</td>
+                    <td class="text-left">WD</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=26">View</a>
+                        <a class="pointer" value="26"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">27</td>
+                    <td class="text-center">
+                                                </td>
+                    <td class="text-center">44</td>
+                    <td class="text-left">ZARA KURTI</td>
+                    <td class="text-center">
+                        <a id="view_button" href="add-item-main-category.php?id=36">View</a>
+                        <a class="pointer" value="36"><i class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+        </tbody>
+    </table>                    
+</div>
+
+
+            </div><!--bodyTab1-->
+        </div><!--summery_body-->
+    </div><!--content-box-top-->
+    <div style="clear:both; height:20px"></div>
+
+    </div><!--bodyWrapper-->
+
+    <div id="confirmation" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Confirmation</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-warning" style="font-weight: bold;">Do you want to delete it?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id='delete' name='delme'>Delete</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id='cancell' value="cancel" name="cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div id="fade"></div>
+<div id="xfade"></div>
+
+</body>
+</html>
+
+
+<script type="text/javascript">$(document).ready(function(){$("a.pointer").click(function(){var row=$(this).parent().parent();$("#confirmation").modal('show');var id=$(this).attr('value');$("#confirmation #delete").click(function(){var mode="deleteCategory";$.post('db/itemCategory.php',{mode:mode,id:id},function(data){data=$.parseJSON(data);if(data['DELETED']=='Y'){$(row).remove();}else{displayMessage(data['MSG']);}});});});});</script>
